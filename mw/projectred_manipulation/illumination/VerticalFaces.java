@@ -5,16 +5,16 @@ import net.minecraft.nbt.NBTTagCompound;
 
 public class VerticalFaces extends Multipart {
 
-	private static final byte WEST = 0;
-	private static final byte EAST = 1;
-	private static final byte NORTH = 2;
-	private static final byte SOUTH = 3;
-	
-	private static final String tagName = "meta";
-	
+	private static final byte	WEST	= 0;
+	private static final byte	EAST	= 1;
+	private static final byte	NORTH	= 2;
+	private static final byte	SOUTH	= 3;
+
+	private static final String	tagName	= "meta";
+
 	@Override
 	public void rotate90(NBTTagCompound data) {
-		switch((int) this.getNumber(tagName, data)) {
+		switch ((int) this.getNumber(tagName, data)) {
 		case WEST:
 			this.setNumber(tagName, NORTH, data);
 			break;
@@ -32,7 +32,7 @@ public class VerticalFaces extends Multipart {
 
 	@Override
 	public void rotate180(NBTTagCompound data) {
-		switch((int) this.getNumber(tagName, data)) {
+		switch ((int) this.getNumber(tagName, data)) {
 		case WEST:
 			this.setNumber(tagName, EAST, data);
 			break;
@@ -50,7 +50,7 @@ public class VerticalFaces extends Multipart {
 
 	@Override
 	public void rotate270(NBTTagCompound data) {
-		switch((int) this.getNumber(tagName, data)) {
+		switch ((int) this.getNumber(tagName, data)) {
 		case WEST:
 			this.setNumber(tagName, SOUTH, data);
 			break;
@@ -68,7 +68,7 @@ public class VerticalFaces extends Multipart {
 
 	@Override
 	public void mirrorX(NBTTagCompound data) {
-		switch((int) this.getNumber(tagName, data)) {
+		switch ((int) this.getNumber(tagName, data)) {
 		case WEST:
 			this.setNumber(tagName, EAST, data);
 			break;
@@ -80,7 +80,7 @@ public class VerticalFaces extends Multipart {
 
 	@Override
 	public void mirrorZ(NBTTagCompound data) {
-		switch((int) this.getNumber(tagName, data)) {
+		switch ((int) this.getNumber(tagName, data)) {
 		case NORTH:
 			this.setNumber(tagName, SOUTH, data);
 			break;
