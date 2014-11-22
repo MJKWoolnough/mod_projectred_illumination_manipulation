@@ -1,8 +1,7 @@
 package mw.projectred_manipulation.illumination;
 
-import net.minecraft.nbt.NBTTagCompound;
-import mw.fmp_manipulation.IMultiPartManipulator;
 import mw.fmp_manipulation.DefaultFMPManipulators.Multipart;
+import net.minecraft.nbt.NBTTagCompound;
 
 public class VerticalFaces extends Multipart {
 
